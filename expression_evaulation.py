@@ -84,7 +84,11 @@ def evaluate(expr):
             operand_stack.append(b * a)
         elif op == "^":
             operand_stack.append(b**a)
-    assert len(operand_stack) == 1
+    try:
+
+        assert len(operand_stack) == 1
+    except AssertionError:
+        raise ValueError("Expression contains no operands!")
     return operand_stack.pop()
 
 
@@ -97,19 +101,3 @@ def prettify(result):
         if (1 / result) % 1 == 0:
             return "1/{}".format(prettify(1 / result))
     return str(result)
-
-
-def main():
-    # input loop
-    while True:
-        try:
-            expr = input("\n>>>")
-            result = evaluate(expr)
-            print(prettify(result))
-        except (KeyboardInterrupt, EOFError):
-            print()
-            quit()
-        except ValueError:
-            print("Bad expression!")
-if __name__ == '__main__':
-    main()

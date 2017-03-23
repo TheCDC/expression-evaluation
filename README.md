@@ -11,7 +11,7 @@ Currently, only five operators are supported:
 - exponentiation (^)
 
 # Instructions
-Simply execute `main.py` to get started.
+Simply execute `main.py` to get started. `Ctrl-c` or `Ctrl-d` to exit.
 
 # Approach
 I chose to create the expresion tree in a recursive manner. The base case of the evaulation process is a string with no parentheses. A pair of parentheses is called a "sub epxression." When a sub expression is encountered, it is isolated and evaluated recursively.

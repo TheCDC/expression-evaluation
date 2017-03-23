@@ -11,7 +11,7 @@ def main():
         except (KeyboardInterrupt, EOFError):
             print()
             quit()
-        except ValueError:
-            print("Bad expression!")
+        except ValueError as e:
+            print(e)
 if __name__ == '__main__':
     main()
