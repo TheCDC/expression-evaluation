@@ -9,3 +9,6 @@ Currently, only five operators are supported:
 - multiplication (*)
 - division (/)
 - exponentiation (^)
+
+# Instructions
+Simply execute `main.py` to get started.
